@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="__outer-content">
+  <!--
+  <div padding-top text-center *ngIf="username">
+    <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+    <h2>{{username}}</h2>
+
+    <ion-list inset>
+      <button ion-item (click)="updatePicture()">Update Picture</button>
+      <button ion-item (click)="changeUsername()">Change Username</button>
+      <button ion-item (click)="changePassword()">Change Password</button>
+      <button ion-item (click)="support()">Support</button>
+      <button ion-item (click)="logout()">Logout</button>
+    </ion-list>
+  </div>
+  -->
+
+
+
+  <!--
+<ion-list>userId:
+  {{userId}}
+</ion-list>
+
+<ion-list>userEm:
+  {{userEm}}
+</ion-list>
+
+<ion-list>userSignedIn:
+  {{userSignedIn}}
+</ion-list>
+
+<ion-list>username:
+  {{username}}
+</ion-list>
+-->
+
+  <div padding-top text-center *ngIf="username">
+    <div class="textcenter userimg">
+      <ion-icon name="ios-contact-outline" style="zoom:8.0;"></ion-icon>
+    </div>
+    <h2>{{username}}</h2>
+
+
+
+
+    <div class="textcenter">
+
+      <div class="textcenter">
+        <button ion-button outline round (click)="changePassword()">Change Password</button>
+      </div>
+      <div class="textcenter">
+        <button ion-button outline round (click)="support()">Contact</button>
+      </div>
+      <div class="textcenter">
+        <button ion-button outline round (click)="logoutUser1()">Logout</button>
+      </div>
+
+      <ion-list inset>
+        <!--
+        <button ion-item (click)="updatePicture()">Update Picture</button>
+        <button ion-item (click)="changeUsername()">Change Username</button>
+        -->
+      </ion-list>
+
+    </div>
+  </div>
+
+
+
+
+</ion-content>

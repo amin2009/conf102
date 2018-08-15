@@ -1,0 +1,301 @@
+page-mynote {
+
+  .button-round-md {
+      padding: 0 15px;
+  }
+
+
+
+  .createbox{
+    border: 1px solid green;
+  }
+
+  .updateform {
+    border: 1px dotted red;
+  }
+
+  .delform {
+    border: 1px dotted green;
+  }
+
+  .notefooter {
+    text-align: right;
+    z-index: 101;
+  }
+
+  .sharebttnwrpr{
+      margin-bottom: 15px;
+  }
+  .notefooter span.sharebttnwrpr,
+  span.nfitem {
+    margin: 0.4rem 0.2rem;
+    margin: 2px 1px;
+
+    height: 2.1em;
+    line-height: 2.1em;
+
+    height: 30px;
+    line-height: 30px;
+
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 0 0.9em;
+    text-align: right;
+  }
+
+
+
+                                            .sharebttnwrpr ion-icon::before {
+                                                display: inline-block;
+                                                position: relative !important;
+                                            }
+                                            .sharebttnwrpr ion-icon:before {
+                                              /* content: "\f3d0"; */
+                                              /* position: absolute; */
+                                              top: 2px;
+                                              padding-right: 5px;
+                                            }
+           
+  .sharebttnwrpr a{
+    display: block;
+    padding-top: 1px;
+    font-size: 1.4rem;
+  }
+
+  .share-dtl-fieldset{
+      margin-bottom: 10px;
+      text-align: center;
+  }
+
+  .share-details.shared{
+      __border: 1px solid green;
+  }
+  .share-details.notshared{
+      __border: 1px solid orange;
+  }
+  .share-details.notshared,
+  .share-details.notshared .clicktotest{
+          display: none;
+  }
+
+  .surl{
+      width: 210px;
+      text-align: center;
+  }
+  .pass{
+      text-align: center;
+      width: 80px;
+  }
+  .clicktotest{
+      padding: 5px 10px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+  }
+
+  /*
+  .nfooter {
+    z-index: 100;
+    border: 2px solid green;
+  }
+  .nfooter.detail {
+    border: 2px solid red;
+  }
+  */
+  .nsharepanel {
+  }
+  .nsharepanel .inner{
+    margin: 3px;
+    padding: 5px 3px;
+    padding-top: 8px;
+    border: 1px solid #eee;
+    background: #f7f7f7;
+  }
+  .nfooter .nsharepanel {
+   max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in;
+  }
+
+  .nfooter.detail .nsharepanel {
+    max-height: 170px;
+    max-height: none;
+    transition: max-height 0.25s ease-in;
+  }
+  .nfooter .nsharepanel {
+    max-height: 200;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in;
+  }
+
+  /*
+  .nfooter .arrow-down,
+  .nfooter .arrow-up,
+  .nfooter.detail .arrow-down,
+  .nfooter.detail .arrow-up{
+    display: none;
+  }
+  .nfooter .arrow-down{
+    display: block;
+  }
+  .nfooter.detail .arrow-up{
+    display: block;
+  }
+  */
+  .nfooter .arrow-up,
+  .nfooter.detail .arrow-up {
+    display: none;
+  }
+
+                                        .nfooter.detail .arrow-down ion-icon {
+                                          -webkit-transform: rotate(180deg);
+                                          -moz-transform: rotate(180deg);
+                                          -ms-transform: rotate(180deg);
+                                          -o-transform: rotate(180deg);
+                                          transform: rotate(180deg);
+                                        }
+                                        .nfooter.detail .sharebttnwrpr .arrow-down ion-icon:before {
+                                          top: 0px;
+                                          padding-right: 0px;
+                                          padding-left: 5px;
+                                        }
+                                        .sharebttnwrpr .ion-ios-arrow-down:before {
+                                          /* 
+                                          top: 2px;
+                                          padding-right: 5px;
+                                          */
+                                        }
+
+  .nsharepanel ion-list {
+    display: inline-flex;
+  }
+
+
+
+
+
+  .shareoption{
+      background-color: silver;
+  margin: 3px;
+  padding: 3px;
+  }
+  .shareoption .button-inner{
+      background-color: red;
+  margin: 3px;
+  padding: 3px;
+  }
+  .shareoption button{
+      background-color: orangered;
+  margin: 3px;
+  padding: 3px;
+  }
+
+
+  /*
+  .nfitem{
+      height: 40px;
+      max-height: 40px;
+      overflow: hidden;
+      border: 1px solid red;
+      display: block;
+  }
+  */
+
+  .card-md{
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(100% - 0px);
+  }
+  .share-enabled{
+    /*
+    color: green;
+    color: palevioletred;
+    */
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px dotted #86BF48;
+  }
+
+  .buttonwrpr {
+    text-align: center;
+  }
+  .buttonwrpr button {
+    width: 150px;
+  }
+
+  .notefooter button,
+  .sharebttnwrpr {
+
+  }
+  .notefooter button,
+  .notefooter .button-md .button-inner{
+    /*
+    font-size: 1.3rem;
+    line-height: 10px;
+    height: 10px !important;
+    margin-top: -10px;
+    */
+  }
+
+  .notefooter button {
+    /*
+    font-size: 1.3rem;
+    line-height: 40px;
+    height: 30px !important;
+    margin-top: -5px;
+    padding-top: 3px;
+    text-transform: capitalize;
+    */
+    margin-top: -5px;
+    padding-top: 3px;
+    height: 32px;
+  }
+  .notefooter .button-md .button-inner {
+    /*
+    font-size: 1.3rem;
+    line-height: 40px;
+    height: 30px !important;
+    margin-top: -5px;
+    padding-top: 3px;
+    text-transform: capitalize;
+    */
+    text-transform: capitalize;
+  }
+
+  #loading1{
+    opacity: 1;
+  }
+  #loading1.loaded{
+    opacity: .2;
+    __display: none;
+  }
+  .bigtext{
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
+
+
+
+
+/*** global ****/
+.notloggedin ,
+.notloggedin ion-card{
+  display: block;
+  padding: 30px 10px;
+}
+.notloggedin h1,
+.notloggedin h2,
+.notloggedin h3,
+.notloggedin h4,
+.notloggedin h5,
+.notloggedin p,
+.notloggedin div
+{
+  text-align: center;
+}
+.extratext {
+  color: #777;
+  margin-top: 10px;
+  font-size: 13px;
+}

@@ -1,0 +1,72 @@
+<!--
+	<ion-header>
+		<ion-navbar>
+		  <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		  </button>
+		  <ion-title>Home </ion-title>
+		  <ion-buttons end>
+			
+		  </ion-buttons>
+		</ion-navbar>
+	</ion-header>
+-->
+
+<ion-content >
+
+
+<div class="padding centerall">
+	<div class="centerall homelogo"> 
+		<img src="./assets/imgs/logo.png">
+	</div>
+
+	<div>
+		<button ion-button large block (click)="goSchdul()"> Schedule </button>
+	</div>
+
+
+	<div *ngIf="(userSignedIn!=1)">
+		<div class="notuserSignedIn"x>
+
+			<h2> Hey
+				<span class="nplgreen-color">Guest</span> !
+			</h2>
+			<p>
+					Login
+					and enjoy your journy.
+			</p>
+		</div>
+	</div>
+
+	<div *ngIf="(userSignedIn==1)">
+		<div class="notuserSignedIn"x>
+			<h2> Hi
+			
+					<span class="nplgreen-color">{{username}}</span>!
+			</h2>
+		</div>
+	</div>
+
+	<p>&nbsp;</p>
+
+
+
+</div>
+
+
+	<button ion-button (click)="showBanner()">Show Banner</button>
+	<button ion-button (click)="launchInterstitial()">Show Interstitial</button>
+	
+	
+	<div class="adbanner1">
+		
+	</div>
+
+	<ion-footer>
+		<div class="adbanner2">
+			
+		</div>
+	</ion-footer>
+
+
+</ion-content>

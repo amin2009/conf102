@@ -1,0 +1,260 @@
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.1.
+//
+//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+}
+
+
+// Creates text alignment classes based on screen size
+// TODO this would be nice to add to the framework
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    // Provide text `[text-{bp}]` attributes for aligning text based on screen size
+    [text#{$infix}-center] {
+      text-align: center;
+    }
+
+    [text#{$infix}-left] {
+      text-align: left;
+    }
+
+    [text#{$infix}-right] {
+      text-align: right;
+    }
+
+    [hidden#{$infix}-up] {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down($breakpoint, $grid-breakpoints) {
+    [hidden#{$infix}-down] {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** global */
+.nnp-card-custom-cont{
+  padding: 15px;
+}
+
+.nnp-card-custom-cont.formwrapper{
+  padding-top: 0;
+  background: #fff;
+}
+
+.nnp-button-center{
+  text-align: center;
+}
+.nnp-button-center button{
+  margin: 0 auto;
+  float: none;
+}
+.nnp-finished-art{
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+.nnp-finished-art img{
+  width: 60px;
+  height: 60px;
+}
+
+/**** menu ****/
+.nnpmnu{
+  /*
+  border-top: 1px solid #ddd;
+  */
+  padding-top: 15px;
+  padding-left: 53px;
+}
+
+.nnpmnu .moreapp{
+  padding: 0 15px 15px 15px;
+}
+page-home .pgfooter{
+  padding-bottom: 22px;
+}
+.mainmenu ion-list{
+  text-align: center; 
+  margin-top: 3px;  
+}
+.moreapp h2,
+.moreapp h3,
+.moreapp h4{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.moreapp h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.moreapp h3.bangla {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.moreapp .desc {
+  font-size: 13px;
+}
+.moreapp a{
+  text-decoration: none;
+  color: #222;
+}
+.moreapp img{
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+
+
+
+#loggedInMenu ion-list,
+#loggedOutMenu ion-list{
+  border-bottom: 1px solid #dedede;
+}
+.nplgreen-color{
+  color: #86BF48;
+}
+.nplgreen-bg{
+  background: #86BF48;
+}
+
+/*   override - menu + button - shadow  */
+
+.searchbar-input {
+  box-shadow: none !important;
+}
+.button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > 
+.tabbar::after, 
+.footer-md::before, 
+.tabs-md[tabsPlacement="bottom"] > 
+.tabbar::before {
+  /*
+  left: 0;
+  bottom: -5px;
+  background-position: left 0 top -2px;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMV…h/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMogMsgFLtAAQCNSwXZKOdPxgAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  content: "";
+  */
+
+  /*
+  background-image: none;  
+  */
+}
+
+.buttonwrpr{
+  padding-left: 2px;
+}
+.scroll-content {
+  overflow-y: auto;
+}
+
+#space2{
+  height: 3px;
+}
+#space2.list-md{
+  margin: -1px 0 0;
+}
+
+/* global */
+.centerall{
+  text-align: center;
+}
+.centerall ion-button,
+.centerall button{
+  margin: 0 auto;
+}
+.toolbar-md-primary .toolbar-background-md,
+.toolbar-md-primary,
+.toolbar-background-md {
+  background: #252526;
+}
+ion-header .headerlogo{
+  height: 44px;
+  margin-right: 10px;
+}
+.textcenter{
+  text-align: center;
+}
+
+
+@media (min-width: 1200px) {
+  .split-pane-md.split-pane-visible > .split-pane-side {
+      min-width: 270px;
+      max-width: 28%;
+      max-width: 270px;
+      border-right: 1px solid #dedede;
+      border-left: 0;
+  }
+  .nplcol-mid,
+  .nplcol-right{
+    float: left;
+    position: relative;
+  }
+  .nplcol-mid{
+    width: 80%;
+    width: calc(100% - 250px);
+  }
+  .nplcol-right{
+    width: 20%;   
+    width: 250px;
+  }
+}

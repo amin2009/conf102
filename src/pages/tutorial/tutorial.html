@@ -1,0 +1,56 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Welcome to <b>nnAppp2<span class="nplgreen-color">Live</span></b>
+      </h2>
+      <p>
+        The <b>nnAppp2 Live app</b> is a simple nnAppp2.
+      </p>
+      <p>
+        But it store your notes online. 
+        So you don't need to backup your notes when you change your phone.      
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
+      <h2 class="slide-title" >Another main feature:</h2>
+      <p>
+        You can view a single note from any device without login to your account, using a combination of a url and a key (as password).
+      </p>
+      <button ion-button icon-end large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+    <!--
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
+      <h2 class="slide-title">What is Ionic Pro?</h2>
+      <p><b>Ionic Pro</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Play?</h2>
+      <button ion-button icon-end large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+    -->
+
+  </ion-slides>
+</ion-content>

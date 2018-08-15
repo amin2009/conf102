@@ -1,0 +1,56 @@
+page-support {
+
+		ion-content {
+			background-color: #0D76BA;
+		}
+		
+		ion-content {
+			background-color: #083177;
+		}
+		
+		.formwrapper{
+			border: 2px solid red;
+		}
+
+		@media (max-width: 570px) {
+			ion-content {
+			/* background-image:  url('./assets/img-aM101/bgm2.png?v=1'); */
+			background-image: url('./assets/img-aM101/bgm3a.png?v=1');
+			background-position: center bottom;
+		
+			background-size: 100% auto;
+			background-position: center -15px;
+			background-position: center bottom;
+			}
+			.bgtopheader,
+			ion-header {
+			background-image: url('./assets/img-aM101/bgm3b.png?v=1');
+			background-size: 100% 100%;
+			background-position: center bottom;
+		
+			background-position: center top;
+			background-repeat: no-repeat;
+			height: 110px;
+			}
+		
+			.hilight{
+				border: 2px solid red;
+			}
+		}	
+}
+
+.formwrapper{
+
+}
+
+.formwrapper,
+.formwrapper iframe{
+	height:790px;
+}
+
+.formwrapper iframe{
+	width: 100%;
+	height: 790px;
+	border: 0;
+	background: #666;
+}

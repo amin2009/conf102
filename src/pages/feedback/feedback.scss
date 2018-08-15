@@ -1,0 +1,133 @@
+/*
+    //https://stackoverflow.com/questions/45579437/change-the-size-of-header-ionic-2
+    .md,
+    .ios,
+    .wp {
+     page-home {
+       ion-header {
+            height: 40px;//by default 56px
+        }
+     }
+    }
+*/
+page-feedback {
+    @media (min-width: 100px) {
+        ion-content {
+          background-color:#fff;
+          /*
+          background-image:  url('./assets/img-aM101/10a1.jpg');
+          background-size: auto auto;
+          background-position:  left top ;
+          */
+        }
+        .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+            background:#09327A;
+        }
+        /*
+        ion-navbar.toolbar{
+            background-image: none;
+            background:#09327A;
+        }
+        */    
+        .conactiframe {
+            width: 100%;
+            height: 500px;
+        }
+    }
+
+
+    iframe{
+        border: 0;
+        margin-top: -40px;
+    }
+    .textright{
+        margin-top: -14px;
+        display: table;
+        float: right;
+    }
+    .textright .bttnout{
+
+        background: #86BF48;
+        __border: 7px solid #86BF48;
+        padding: 0 9px 2px 9px;
+        border-top: 0;
+        margin-right: 20px;
+            min-height:48px;
+            text-align: center;
+
+            display: table;
+
+            -webkit-border-bottom-right-radius: 7px;
+            -webkit-border-bottom-left-radius: 7px;
+            -moz-border-radius-bottomright: 7px;
+            -moz-border-radius-bottomleft: 7px;
+            border-bottom-right-radius: 7px;
+            border-bottom-left-radius: 7px;
+       
+    }
+
+     ion-header {
+         height: 6px;
+         position: absolute !important;
+         overflow: visible; 
+         z-index: 11;
+         background: #86BF48
+     }
+     ion-navbar.toolbar-md {
+        position: absolute !important;
+        overflow: visible;
+
+        height: 50px;
+        padding: 2px;
+        min-height: 10px;
+        position: absolute !important;
+        z-index: 12;
+    }
+    ion-navbar.toolbar-md button
+    {
+       z-index: 99;
+    }
+.toolbar-md-primary .toolbar-background-md,
+.toolbar-md-primary,
+.toolbar-background-md {
+  background: transparent;
+}
+    .toolbar-content{
+
+    }
+    .toolbar-content-md{
+        overflow: visible; 
+        height: 20px; 
+        margin: 0;
+        z-index: 12;
+    }
+    ion-header [col-11],
+    ion-header [col-10],
+    ion-header [col-9],
+    ion-header [col-8],
+    ion-header [col-7],
+    ion-header [col-6],
+    ion-header [col-5],
+    ion-header [col-4],
+    ion-header [col-3],
+    ion-header [col-2],
+    ion-header [col-1]
+     {
+        padding: 0;
+    }
+
+    #closemodal{
+        z-index: 109;
+    }
+
+    .md,
+    .ios,
+    .wp {
+        /*
+        ion-header {
+            height: 10px;
+        }
+        */
+    }
+}
+

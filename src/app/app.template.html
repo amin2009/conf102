@@ -1,0 +1,237 @@
+<ion-split-pane>
+
+
+    <!-- logged out menu -->
+    <ion-menu id="loggedOutMenu" [content]="content">
+  
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+  
+      <ion-content class="outer-content">
+
+        <ion-list>
+            <!--
+          <ion-list-header>
+            Navigate
+          </ion-list-header>
+          -->
+          <!--
+          <button ion-item menuClose  (click)="openNotePg('NotePage')">
+            <ion-icon item-start ></ion-icon>
+            Note
+          </button>
+          <button ion-item menuClose  (click)="openHome()">
+            <ion-icon item-start ></ion-icon>
+            Home
+          </button>
+          -->
+          <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+  
+        
+  
+        <ion-list>
+            <!--
+            <ion-list-header>
+              Account
+            </ion-list-header>
+            -->
+          <button ion-item menuClose *ngFor="let p of loggedOutPages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+  
+        <ion-list>
+            <!--
+          <ion-list-header>
+            Help
+          </ion-list-header>
+            -->
+          <button ion-item menuClose (click)="openTutorial()">
+            <ion-icon item-start name="hammer"></ion-icon>
+            How it works
+          </button>
+        </ion-list>
+
+
+        <ion-list id="space2">
+          &nbsp;
+        </ion-list>
+
+            <!-- Extra menu S-->
+            <ion-list>
+                <ion-list-header>
+                  Other Links:
+                </ion-list-header>
+
+
+                <div class="nnpmnu__">
+                    <!--
+                    <div class=" moreapp hd">
+                        <b>অন্যান্য অ্যাপ:</b>
+                    </div>
+                    -->
+                    <div class="moreapp">
+                        <!--href="https://play.google.com/store/apps/details?id=com.nnAppp2live"-->
+                        <!--<a class="href" href="javascript:void(0)" id="makh1" onclick="launchUrl()">-->
+                        <!--<a class="href" href="javascript:void(0)" onclick="window.open('https://play.google.com/store/apps/details?id=com.nnAppp2live', '_system', 'location=yes'); return false;">--> <!--https://www.thepolyglotdeveloper.com/2014/07/launch-external-urls-ionicframework/ -->
+                        <a class="href" href="javascript:void(0)" (click)="launchUrl('MMMcccc')">
+                          
+                        </a>
+                    </div>
+                    <!--
+                    <div class="moreapp">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nnAppp2live">
+                          <ion-row>
+                              <ion-col col-1></ion-col>
+                              <ion-col col-3>
+                                      <img src="./assets/imgs/app-npl.png">
+                              </ion-col>
+                              <ion-col col-7>
+                                <h3 style="margin-top:0">nnAppp2Live</h3>
+                                <div class="desc"> Online nnAppp2. Access your notes from various devices at the same time.
+                                </div>
+                              </ion-col>
+                
+                          </ion-row>
+                        </a>
+                    </div>
+                    -->
+                </div>
+
+            </ion-list>
+              <!-- Extra menu E-->
+            
+      </ion-content>
+
+
+    </ion-menu>
+
+
+
+
+
+  
+    <!-- logged in menu -->
+    <ion-menu id="loggedInMenu" [content]="content">
+  
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+  
+      <ion-content class="outer-content">
+        
+        <ion-list id="list1_appages">
+          <!--
+          <ion-list-header>
+            Navigate
+          </ion-list-header>
+          -->
+          <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+  
+        <ion-list id="list2_loggedin">
+          <!--
+          <ion-list-header>
+            Account
+          </ion-list-header>
+          -->
+          <button ion-item menuClose *ngFor="let p of loggedInPages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+  
+          <ion-list id="list3_loggedout">
+            <!--
+            <ion-list-header>
+              Tutorial 
+            </ion-list-header>
+            -->
+            <button ion-item menuClose (click)="openTutorial()">
+              <ion-icon item-start name="hammer"></ion-icon>
+              Show Tutorial 
+            </button>
+          </ion-list>
+
+
+            <!-- Extra menu S-->
+            <ion-list>
+                <ion-list-header>
+                  Other Links:
+                </ion-list-header>
+
+
+                <div class="nnpmnu__">
+                    <!--
+                    <div class=" moreapp hd">
+                        <b>অন্যান্য অ্যাপ:</b>
+                    </div>
+                    -->
+                    <div class="moreapp">
+                        <!--href="https://play.google.com/store/apps/details?id=com.nnAppp2live"-->
+                        <!--<a class="href" href="javascript:void(0)" id="makh1" onclick="launchUrl()">-->
+                        <!--<a class="href" href="javascript:void(0)" onclick="window.open('https://play.google.com/store/apps/details?id=com.nnAppp2live', '_system', 'location=yes'); return false;">--> <!--https://www.thepolyglotdeveloper.com/2014/07/launch-external-urls-ionicframework/ -->
+                        <a class="href" href="javascript:void(0)" (click)="launchUrl('MMMcccc')">
+                          <ion-row>
+                              <ion-col col-1></ion-col>
+                              <ion-col col-3>
+                                      <img src="./assets/imgs/aaa-101.png">
+                              </ion-col>
+                              <ion-col col-7>
+                                  QQQQQQ
+                              </ion-col>
+                          </ion-row>
+                        </a>
+                    </div>
+                    <!--
+                    <div class="moreapp">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nnAppp2live">
+                          <ion-row>
+                              <ion-col col-1></ion-col>
+                              <ion-col col-3>
+                                      <img src="./assets/imgs/app-npl.png">
+                              </ion-col>
+                              <ion-col col-7>
+                                <h3 style="margin-top:0">nnAppp2Live</h3>
+                                <div class="desc"> Online nnAppp2. Access your notes from various devices at the same time.
+                                </div>
+                              </ion-col>
+                
+                          </ion-row>
+                        </a>
+                    </div>
+                    -->
+                </div>
+
+            </ion-list>
+              <!-- Extra menu E-->
+            
+      </ion-content>
+
+    </ion-menu>
+
+
+
+  
+    <!-- main navigation -->
+    <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>
+  
+  </ion-split-pane>
+  
