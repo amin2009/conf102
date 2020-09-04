@@ -41,7 +41,7 @@
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-google-analytics": "^1.8.6",
-    "cordova-plugin-inappbrowser": "^1.7.2",
+    "cordova-plugin-inappbrowser": "^3.1.0",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
     "cordova-plugin-ionic-webview": "^1.2.1",
     "cordova-plugin-nativestorage": "^2.3.2",
